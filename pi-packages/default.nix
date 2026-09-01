@@ -7,6 +7,7 @@ let
   pi-web-access = import ./pi-web-access.nix { inherit pkgs; };
   remnic-plugin-pi = import ./remnic-plugin-pi.nix { inherit pkgs; };
   rpiv-ask-user-question = import ./rpiv-ask-user-question.nix { inherit pkgs; };
+  robhowley-pi-openrouter = import ./robhowley-pi-openrouter.nix { inherit pkgs; };
 in
 {
   inherit
@@ -17,5 +18,6 @@ in
     pi-web-access
     remnic-plugin-pi
     rpiv-ask-user-question
+    robhowley-pi-openrouter
     ;
 }

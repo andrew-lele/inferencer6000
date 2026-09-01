@@ -11,6 +11,7 @@ piShell.pkgs.mkShellNoCC {
     ripgrep
     jq
     jujutsu
+    radicle-node
     rtk
     secretspec
     gnupg # gpg, for jj commit signing

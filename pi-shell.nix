@@ -34,6 +34,7 @@ let
             "${pi-packages.pi-subagents}"
             "${pi-packages.pi-web-access}"
             "${pi-packages.rpiv-ask-user-question}"
+            "${pi-packages.robhowley-pi-openrouter}"
           ];
           themes = [
             # ./themes/<name>.json
@@ -49,6 +50,8 @@ let
     "UNSLOTH_API_KEY"
     "DEEPSEEK_API_KEY"
     "KAGI_API_KEY"
+    "OPENROUTER_API_KEY"
+    "OPENROUTER_MANAGEMENT_KEY"
   ];
 
   # Emit shell that loads each key from the keyring (falling back to an
