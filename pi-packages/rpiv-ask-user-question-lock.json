@@ -1,0 +1,40 @@
+{
+  "name": "@juicesharp/rpiv-ask-user-question",
+  "version": "2.7.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@juicesharp/rpiv-ask-user-question",
+      "version": "2.7.0",
+      "license": "MIT",
+      "dependencies": {
+        "@juicesharp/rpiv-config": "^2.7.0",
+        "typebox": "^1.1.24"
+      },
+      "peerDependencies": {
+        "@juicesharp/rpiv-i18n": "*"
+      },
+      "peerDependenciesMeta": {
+        "@juicesharp/rpiv-i18n": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/@juicesharp/rpiv-config": {
+      "version": "2.7.0",
+      "resolved": "https://registry.npmjs.org/@juicesharp/rpiv-config/-/rpiv-config-2.7.0.tgz",
+      "integrity": "sha512-S6+O9nub/n6WoTrs2egEai2MpymbeD9+Ut+aCgnaDu3OYA6nbAz4ZiFHLz9HVj7dALj8RuUaj5xtnX50J8MPRQ==",
+      "license": "MIT",
+      "dependencies": {
+        "typebox": "^1.1.24"
+      }
+    },
+    "node_modules/typebox": {
+      "version": "1.3.17",
+      "resolved": "https://registry.npmjs.org/typebox/-/typebox-1.3.17.tgz",
+      "integrity": "sha512-20PsSaZV1pN7pIfM/YEUHZNTv8X21+1ilPo/HN+6GtFbhCaQhLrIoKCkAkcBwIva3nYI+Ao0MxM1iDj5H3SOhw==",
+      "license": "MIT"
+    }
+  }
+}

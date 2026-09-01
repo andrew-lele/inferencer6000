@@ -1,0 +1,10 @@
+# Pi runtime artifacts (machine-specific, do not commit)
+.pi/
+.pi-lens/
+
+# Nix build outputs
+result
+result-*
+
+# macOS
+.DS_Store
