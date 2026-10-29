@@ -1,7 +1,7 @@
 # The project dev shell — enter with bare `nix-shell` in this directory.
 #
-# Generic tools live here; the pi-specific layer (configured agent package +
-# shell hook) comes from ./pi-shell.nix.
+# Generic tools live here; the pi-specific layer (agent package wrapped in
+# secretspec run for key injection) comes from ./pi-shell.nix.
 let
   piShell = import ./pi-shell.nix;
 in
@@ -12,7 +12,13 @@ piShell.pkgs.mkShellNoCC {
   # ambient on PATH; declare one here only if this repo needs a DIFFERENT
   # version than the base.
   buildInputs = with piShell.pkgs; [
-    # radicle-node
+    # Radicle 1.x node + CLI (`radicle-node`, `rad`, `git-remote-rad`).
+    # Having it on PATH is what makes `jj git push` work against the `rad`
+    # remote: jj's built-in git backend hands rad:// URLs to plain git, which
+    # then needs the git-remote-rad helper — without it you get
+    # "git: 'remote-rad' is not a git command" / "remote helper 'rad' aborted".
+    # Marked insecure upstream; see pi-shell.nix for why we deliberately allow it.
+    radicle-node
     rtk
     secretspec
     piShell.pi
@@ -26,6 +32,4 @@ piShell.pkgs.mkShellNoCC {
     taplo # toml linter/formatter
     markdownlint-cli2 # markdown linter
   ];
-
-  shellHook = piShell.shellHook;
 }

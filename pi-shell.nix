@@ -4,10 +4,15 @@ let
   pkgs = import inputs.nixpkgs {
     inherit system;
     config.allowUnfree = true;
+    # radicle-node is flagged insecure upstream: "private repositories are
+    # insecure: traffic between nodes is not encrypted and not authenticated".
+    # Accepted deliberately — this node replicates only mac <-> ahsan over Tor
+    # with private ids and is not federated with the public Radicle network.
+    config.allowInsecurePredicate = p: (p.pname or "") == "radicle-node";
   };
 
-  # Pi binary from numtide/llm-agents.nix.
-  pi = inputs.llm-agents.packages.${system}.pi;
+  # Pi binary from numtide/llm-agents.nix (raw; wrapped by `pi` below).
+  piBase = inputs.llm-agents.packages.${system}.pi;
 
   # Pi packages built from pinned npm tarballs (no runtime npm installs).
   pi-packages = import ./pi-packages { inherit pkgs; };
@@ -18,7 +23,7 @@ let
     modules = [
       {
         pi.coding-agent = {
-          package = pi;
+          package = piBase;
           rules = ./AGENTS.md;
           skills = [
             # ./skills/<name>
@@ -47,42 +52,21 @@ let
     ];
   };
 
-  # API keys sourced from the secretspec keyring into the shell (and thus pi).
-  # Add a name here and declare it in ./secretspec.toml to wire up a new key.
-  apiKeys = [
-    "UNSLOTH_API_KEY"
-    "KAGI_API_KEY"
-    "OPENROUTER_API_KEY"
-    "OPENROUTER_MANAGEMENT_KEY"
-  ];
-
-  # Emit shell that loads each key from the keyring (falling back to an
-  # already-exported env var) so pi sees it without a manual export.
-  keyHook = pkgs.lib.concatMapStringsSep "\n" (name: ''
-    _key="$(secretspec get -f "${./secretspec.toml}" ${name} 2>/dev/null || true)"
-    if [ -n "$_key" ]; then
-      export ${name}="$_key"
-    fi
-    if [ -n "''${${name}:-}" ]; then
-      echo "  ${name}: loaded from keyring"
-    else
-      echo "  ${name}: not set (run: secretspec set ${name})"
-    fi
-  '') apiKeys;
-
-  # Shell hook, consumed by ./shell.nix — load keys from the keyring.
-  shellHook = ''
-    echo "Loading API keys from secretspec keyring:"
-  ''
-  + keyHook
-  + ''
-    if [ -n "''${UNSLOTH_API_KEY:-}" ]; then
-      echo "Unsloth backend enabled (pi -> http://localhost:8888/v1)"
-    fi
+  # pi wrapped in secretspec run: the profile's keys are injected into pi's
+  # environment at launch, so they never touch the nix-shell (or any .drv —
+  # a mkShell `env` attrset would stamp them into the store). Key material
+  # exists only in pi's process tree (and the children it spawns).
+  # NOTE: secretspec run fails hard if a declared secret is unset — pi then
+  # names the key; fix with `secretspec set <name>`. The parent env is passed
+  # through untouched, so user-set PI_* / provider overrides still apply.
+  pi = pkgs.writeShellScriptBin "pi" ''
+    exec ${pkgs.secretspec}/bin/secretspec run -f ${./secretspec.toml} -- ${configured.package}/bin/pi "$@"
   '';
 in
 {
   inherit pkgs;
-  pi = configured.package;
-  inherit shellHook;
+  inherit pi;
+  # Exposed so a single vendored package can be built without flakes:
+  #   nix-build ./pi-shell.nix -A pi-packages.pi-lens
+  inherit pi-packages;
 }
