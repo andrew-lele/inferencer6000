@@ -7,9 +7,17 @@ let
       type = "github";
       owner = "hercules-ci";
       repo = "flake-parts";
-      rev = "9d0d87172c374f89da73c1cfe6d81ae62feac1f1";
-      lastModified = 1787559586;
-      narHash = "sha256-onL0VLf9vPllmT0H/OlURIU5r5t5WIEl7t4tVNKT0Nw=";
+      rev = "024633cd702b10285db5cb19b40ad48d2399ba60";
+      lastModified = 1790898470;
+      narHash = "sha256-zTwuwezD0w3hpga6a6P8emidzAZFyWqlNeRBlpWOOl8=";
+    };
+    unflake_github_mic92_bun2nix_ref_llm-agents = {
+      type = "github";
+      owner = "mic92";
+      repo = "bun2nix";
+      rev = "07a5bfc8ac36c5370199343fa620b69f63186e33";
+      lastModified = 1790001035;
+      narHash = "sha256-1/SLBjSYBzDdDhvLQ83wrzBakyS/xNGgtxHGNuveOEQ=";
     };
     unflake_github_nix-community_bun2nix_ref_2-1-0 = {
       type = "github";
@@ -19,29 +27,21 @@ let
       lastModified = 1778446047;
       narHash = "sha256-oQvcadh2BCkrog+SGrG6YffKJrveYpjj3TdQJWaKhaM=";
     };
-    unflake_github_nix-community_bun2nix = {
-      type = "github";
-      owner = "nix-community";
-      repo = "bun2nix";
-      rev = "0f2a1f0b6f42cebe3b149bf62d38754c5e0e9729";
-      lastModified = 1784665499;
-      narHash = "sha256-9BMxlTxCCDAeoNLtb1a/st7udtTIJep+wpUzquA29VU=";
-    };
     unflake_github_nix-community_nixpkgs-lib = {
       type = "github";
       owner = "nix-community";
       repo = "nixpkgs.lib";
-      rev = "596e2e3940e09b2abbeb03f75fa1828c57fcd72c";
-      lastModified = 1788057806;
-      narHash = "sha256-DTQSMxzDWmT0zhguthvegnVkn7CFqGCv4IHCzk5ZUpM=";
+      rev = "d0f596215fbb1603854039023c281b7c2ed1fd33";
+      lastModified = 1792290253;
+      narHash = "sha256-Kgup1sH+/4qilwusTsSZ4PVjvVABEu5mrgWcZqZ7ePw=";
     };
     unflake_github_nix-systems_default = {
       type = "github";
       owner = "nix-systems";
       repo = "default";
-      rev = "da67096a3b9bf56a91d16901293e51ba5b49a27e";
-      lastModified = 1681028828;
-      narHash = "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=";
+      rev = "d36eeed142f88b5a636f2e3856a53c61654cf29b";
+      lastModified = 1791244623;
+      narHash = "sha256-uuanbkFk8a313Zfrxdcz8Us/yQtaxNnKJtX8v0ZPpd8=";
     };
     unflake_github_nix-systems_triplet = {
       type = "github";
@@ -55,33 +55,41 @@ let
       type = "github";
       owner = "nixos";
       repo = "nixpkgs";
-      rev = "34ab99075ac4f7e40cf037eef32cb1c360bb85e9";
-      lastModified = 1788179007;
-      narHash = "sha256-hn1oU2rue2SYK8dAr8+WNZWtbsz1S2W5mnHlSEuh3bo=";
+      rev = "fe13242281a67641c0102cdb1087f0ebe586c7df";
+      lastModified = 1792094642;
+      narHash = "sha256-zp8ToDMnqZcu4o4IH9pdwXFXGp7yLm/M0dEnNWnyd7I=";
+    };
+    unflake_github_nixos_nixpkgs_ref_nixpkgs-26-05-darwin = {
+      type = "github";
+      owner = "nixos";
+      repo = "nixpkgs";
+      rev = "e16b7a8dc0d467861b053a85f437d7dede44963c";
+      lastModified = 1792357144;
+      narHash = "sha256-ID3w97GF89cYVbvM7Bfr9mcbZF4tY8V0/qsu/R5s9RM=";
     };
     unflake_github_nixos_nixpkgs_ref_nixpkgs-unstable = {
       type = "github";
       owner = "nixos";
       repo = "nixpkgs";
-      rev = "e8be7818e19ada32105a8af937a6a473b38167ca";
-      lastModified = 1787964612;
-      narHash = "sha256-0N9nghg3nwzX6b6qc77EzjR9cu/Z+UR66FlfsCqiURs=";
+      rev = "f20cd90e28fe0403873f473b29e42662cd86e8c4";
+      lastModified = 1792116957;
+      narHash = "sha256-EjZqHKObBfIOeHZnMRVV87HB3pPq/WBkmRJWyFxmZu8=";
     };
     unflake_github_numtide_treefmt-nix = {
       type = "github";
       owner = "numtide";
       repo = "treefmt-nix";
-      rev = "27b3b12a8e6375f28ebe122f07d230ca5459bbfa";
-      lastModified = 1786901030;
-      narHash = "sha256-WSFCsDSE5ffgD2MqzkM2CYjeFiKhRF/dJUN8uedb6YE=";
+      rev = "0d6d739a833ba9a9c93034862e4a7b061a062a1c";
+      lastModified = 1791885023;
+      narHash = "sha256-C3alQ2MEt0zVrUSho5NUDo3jmhbff72++bfwoqT9Omo=";
     };
     unflake_sourcehut_-alexdavid_jail-nix = {
       type = "sourcehut";
       owner = "~alexdavid";
       repo = "jail.nix";
-      rev = "e9210ebaa4b264cc1710a2a23254cc0402c34d0f";
-      lastModified = 1783532714;
-      narHash = "sha256-2MC7ivWBgyhHh6WBIvj1LRz00s8mZTti0iVyqeF+K/s=";
+      rev = "7cd53acef3ad51b9c775be759f5643f8d3bcf6eb";
+      lastModified = 1788928033;
+      narHash = "sha256-UQRytK4SsshV1CeX6aKF+P855Sbcqg9aA731eYTakNg=";
     };
     unflake_git_https---codeberg-org-goldstein-unflake = {
       type = "git";
@@ -93,16 +101,16 @@ let
     unflake_git_https---github-com-lukasl-dev-pi-nix = {
       type = "git";
       url = "https://github.com/lukasl-dev/pi.nix";
-      rev = "15aa899740a918c89c3ed85a6a28d7c5e25b3924";
-      lastModified = 1788254858;
-      narHash = "sha256-DmRni2y8qjf8TueivkhiLCf6ztaF7rX3XyUa2kWGouA=";
+      rev = "59c2e813b74841305a4019fc01001cd3bd71125f";
+      lastModified = 1792403733;
+      narHash = "sha256-NjudrJneE05FVLCkFbMI0hp2UbYOo7EM8MkbQZNukBk=";
     };
     unflake_git_https---github-com-numtide-llm-agents-nix = {
       type = "git";
       url = "https://github.com/numtide/llm-agents.nix";
-      rev = "84ded9f7d2c878065a38bf801fab28b7fda46fe0";
-      lastModified = 1788279991;
-      narHash = "sha256-qhHcbukPxn4FPeURQDtTwrMNpb/6rmZim2dQ2iwsaTA=";
+      rev = "8fa7ff4193be923056b342d48d5bb38466791fe1";
+      lastModified = 1792412467;
+      narHash = "sha256-+8HD0xrtrXiSMgxVSLVzxEk2EicPZBz9/bBHc2u6vb0=";
     };
   };
   deps = indirect_deps // builtins.mapAttrs (_: spec: builtins.fetchTree spec) specs;
@@ -110,16 +118,16 @@ let
     unflake_github_hercules-ci_flake-parts = {
       nixpkgs-lib = "unflake_github_nix-community_nixpkgs-lib";
     };
+    unflake_github_mic92_bun2nix_ref_llm-agents = {
+      flake-parts = "unflake_github_hercules-ci_flake-parts";
+      nixpkgs = "unflake_github_nixos_nixpkgs_ref_nixos-unstable";
+      systems = "unflake_github_nix-systems_triplet";
+      treefmt-nix = "unflake_github_numtide_treefmt-nix";
+    };
     unflake_github_nix-community_bun2nix_ref_2-1-0 = {
       flake-parts = "unflake_github_hercules-ci_flake-parts";
       nixpkgs = "unflake_github_nixos_nixpkgs_ref_nixos-unstable";
       systems = "unflake_github_nix-systems_default";
-      treefmt-nix = "unflake_github_numtide_treefmt-nix";
-    };
-    unflake_github_nix-community_bun2nix = {
-      flake-parts = "unflake_github_hercules-ci_flake-parts";
-      nixpkgs = "unflake_github_nixos_nixpkgs_ref_nixos-unstable";
-      systems = "unflake_github_nix-systems_triplet";
       treefmt-nix = "unflake_github_numtide_treefmt-nix";
     };
     unflake_github_nix-community_nixpkgs-lib = {
@@ -129,6 +137,8 @@ let
     unflake_github_nix-systems_triplet = {
     };
     unflake_github_nixos_nixpkgs_ref_nixos-unstable = {
+    };
+    unflake_github_nixos_nixpkgs_ref_nixpkgs-26-05-darwin = {
     };
     unflake_github_nixos_nixpkgs_ref_nixpkgs-unstable = {
     };
@@ -142,12 +152,14 @@ let
     };
     unflake_git_https---github-com-lukasl-dev-pi-nix = {
       bun2nix = "unflake_github_nix-community_bun2nix_ref_2-1-0";
+      bun2nix-x86_64-darwin = "unflake_github_nix-community_bun2nix_ref_2-1-0";
+      flake-parts = "unflake_github_hercules-ci_flake-parts";
       jail-nix = "unflake_sourcehut_-alexdavid_jail-nix";
       nixpkgs = "unflake_github_nixos_nixpkgs_ref_nixos-unstable";
-      systems = "unflake_github_nix-systems_default";
+      nixpkgs-x86_64-darwin = "unflake_github_nixos_nixpkgs_ref_nixpkgs-26-05-darwin";
     };
     unflake_git_https---github-com-numtide-llm-agents-nix = {
-      bun2nix = "unflake_github_nix-community_bun2nix";
+      bun2nix = "unflake_github_mic92_bun2nix_ref_llm-agents";
       flake-parts = "unflake_github_hercules-ci_flake-parts";
       nixpkgs = "unflake_github_nixos_nixpkgs_ref_nixpkgs-unstable";
       systems = "unflake_github_nix-systems_default";
@@ -170,12 +182,13 @@ let
     in self;
   universe = rec {
     unflake_github_hercules-ci_flake-parts = inject "unflake_github_hercules-ci_flake-parts" "flake.nix" "";
+    unflake_github_mic92_bun2nix_ref_llm-agents = inject "unflake_github_mic92_bun2nix_ref_llm-agents" "flake.nix" "";
     unflake_github_nix-community_bun2nix_ref_2-1-0 = inject "unflake_github_nix-community_bun2nix_ref_2-1-0" "flake.nix" "";
-    unflake_github_nix-community_bun2nix = inject "unflake_github_nix-community_bun2nix" "flake.nix" "";
     unflake_github_nix-community_nixpkgs-lib = inject "unflake_github_nix-community_nixpkgs-lib" "flake.nix" "";
     unflake_github_nix-systems_default = inject "unflake_github_nix-systems_default" "flake.nix" "";
     unflake_github_nix-systems_triplet = inject "unflake_github_nix-systems_triplet" "flake.nix" "";
     unflake_github_nixos_nixpkgs_ref_nixos-unstable = inject "unflake_github_nixos_nixpkgs_ref_nixos-unstable" "flake.nix" "";
+    unflake_github_nixos_nixpkgs_ref_nixpkgs-26-05-darwin = inject "unflake_github_nixos_nixpkgs_ref_nixpkgs-26-05-darwin" "flake.nix" "";
     unflake_github_nixos_nixpkgs_ref_nixpkgs-unstable = inject "unflake_github_nixos_nixpkgs_ref_nixpkgs-unstable" "flake.nix" "";
     unflake_github_numtide_treefmt-nix = inject "unflake_github_numtide_treefmt-nix" "flake.nix" "";
     unflake_sourcehut_-alexdavid_jail-nix = inject "unflake_sourcehut_-alexdavid_jail-nix" "flake.nix" "";

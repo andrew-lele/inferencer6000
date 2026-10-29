@@ -23,6 +23,9 @@ let
           skills = [
             # ./skills/<name>
           ];
+          settings = {
+            theme = "gruvbox-dark-soft";
+          };
           extensions = [
             ./extensions/unsloth.ts
             ./extensions/hide-providers.ts
@@ -37,7 +40,7 @@ let
             "${pi-packages.robhowley-pi-openrouter}"
           ];
           themes = [
-            # ./themes/<name>.json
+            ./themes/gruvbox-dark-soft.json
           ];
         };
       }
@@ -48,7 +51,6 @@ let
   # Add a name here and declare it in ./secretspec.toml to wire up a new key.
   apiKeys = [
     "UNSLOTH_API_KEY"
-    "DEEPSEEK_API_KEY"
     "KAGI_API_KEY"
     "OPENROUTER_API_KEY"
     "OPENROUTER_MANAGEMENT_KEY"

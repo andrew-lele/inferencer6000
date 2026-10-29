@@ -2,10 +2,10 @@
 (import ./mk.nix { inherit pkgs; }) {
   pname = "robhowley-pi-openrouter";
   npmName = "@robhowley/pi-openrouter";
-  version = "0.14.0";
-  hash = "sha256-m15ww6iN0RXDEMaL0vV8CoSnWOZuKrPSMmEcqLDCPOY=";
+  version = "0.14.4";
+  hash = "sha256-cJeTcPdep2RX9u/6/gJHtWrmTRxxOBahABsOeZesQZM=";
   lock = ./robhowley-pi-openrouter-lock.json;
-  npmDepsHash = "sha256-9SD+GpEMtpCy6MK/ITLdErdNGgup0g3wpCe5o/liZLg=";
-  description = "OpenRouter usage/account TUI overlays, session tagging, model catalog sync, API key mgmt";
+  npmDepsHash = "sha256-jpXVJRc6cfKnkSyWWqC6ZK2MHNsaAprtgOp9PEE+1fw=";
+  description = "Live OpenRouter spend/account TUI overlays, user-scoped or free-only model sync, api key management, and session tagging for Pi.";
   homepage = "https://pi.dev/packages/@robhowley/pi-openrouter";
 }
